@@ -42,7 +42,7 @@ anouncement = 630333673584984064  #were want to anounce
 newvideo = 630513815855038496     #were want to upload new video
 admin_ctrl = 638263332863737868
 wike = ["wikipedia"]
-bot_logs = 736316437118844939
+bot_logs = 736331700459536545
 suggest_vid = 637272528393338880
 
 #valid users
