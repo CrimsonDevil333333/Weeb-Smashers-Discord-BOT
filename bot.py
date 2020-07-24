@@ -5,7 +5,6 @@ from discord.ext import commands
 import datetime
 import random
 import praw
-import corona_api
 from discord.utils import get
 from random import randrange
 import asyncio
@@ -20,7 +19,6 @@ URL = "https://www.worldometers.info/coronavirus/"
 r = requests.get(URL) 
 soup = BeautifulSoup(r.content, 'html5lib')
 
-corona = corona_api.Client()
 
 #change id to wlcm channel id/tube....
 ctp = ["ctp-guide"]
@@ -68,60 +66,6 @@ bot.remove_command("help")
 
 
 #######################       start         ###########################
-
-@bot.command(name="coronavirus", aliases=["cv", "corona"])
-async def coronavirus( ctx, country=None, *, state=None):
-    
-        if not country:
-            data = await corona.all()
-        
-        elif country.lower() == "czech":
-            country = "czech republic"
-
-        elif (country.lower() == "us" or country.lower() == "usa"):
-            if state:
-                data = await corona.get_state_info(state)
-                
-            else:
-                data = await corona.get_country_data(country)
-
-        else:
-            data = await corona.get_country_data(country)
-
-        embed = discord.Embed(title="Coronavirus (COVID-19) stats", color=65280)
-        embed.set_footer(text="These stats are what has been officially confirmed. It is possible that real figures are different.")
-
-        embed.add_field(name="Total cases", value = corona_api.format_number(data.cases))
-        embed.add_field(name="Cases today", value = corona_api.format_number(data.today_cases))
-        embed.add_field(name="Total deaths", value = corona_api.format_number(data.deaths))
-        embed.add_field(name="Deaths today", value = corona_api.format_number(data.today_deaths))
-        embed.add_field(name="Total recoveries", value = corona_api.format_number(data.recoveries))
-        embed.set_footer(text=f"{ctx.guild}", icon_url=f"{ctx.guild.icon_url}")
-        embed.timestamp = datetime.datetime.utcnow()
-
-        if not isinstance(data, corona_api.StateStatistics):
-            embed.add_field(name="Total critical cases", value = corona_api.format_number(data.critical))
-
-        if isinstance(data, corona_api.GlobalStatistics):
-            embed.add_field(name="Last updated", value = corona_api.format_date(data.updated))
-
-        elif isinstance(data, corona_api.CountryStatistics):
-            embed.add_field(name="Cases per million people", value = corona_api.format_number(data.cases_per_million))
-            embed.description = "**Country: {}**".format(data.name)
-            embed.set_thumbnail(url=data.flag)
-
-        else:
-            embed.add_field(name="Active cases", value=corona_api.format_number(data.active))
-            embed.description = "**State: {}**".format(data.name)
-
-        await ctx.send(embed=embed)
-
-
-@bot.command(pass_context=True,aliases=['desiese','desease','dea','live','latest','covid19'])
-async def covid(ctx):
-    dead = soup.title.text
-    dead = dead.split(" - Worldometer")
-    await ctx.send(f"{dead[0]}")
 
 
 
