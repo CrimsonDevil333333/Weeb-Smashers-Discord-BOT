@@ -28,6 +28,7 @@ memes_ctrl = ["memes"]
 rust_ctrl = ["rust-language"]
 anime_reco = ["animes",'anime','weeb-smash','weebs','weeb']
 bot_private = ["bot-spam"]
+bot_name = ["Crimanu#5184"]
 
 reddit = praw.Reddit(client_id='FNpct8XLVG2LTg',
                      client_secret='UeA14hUpw7LoKlkqFU2QDLoWu8M',
@@ -76,15 +77,20 @@ bot.remove_command("help")
 
 
 #######################       start         ###########################
+@bot.event
+async def on_message(ctx):
+    if str(ctx.author) in bot_name:
+        pass
+    else:
+        if str(ctx.channel) in bot_private:
+            s = k.respond(ctx.content)
+            await ctx.channel.send(s)
 
-@bot.command()
-async def brb(ctx, * , reason = None):
-    if str(ctx.channel) in bot_private:
-        if reason == None:
-            await ctx.send("What brb.....")
-        else:
-            s = k.respond(reason)
-            await ctx.send(s)
+
+
+
+
+    
 # *************************************************************************** AIML ABOVE ! #######
 
 @bot.command(pass_context=True, aliases=['lea'])
