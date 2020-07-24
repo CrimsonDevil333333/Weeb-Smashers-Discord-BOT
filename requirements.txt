@@ -11,6 +11,4 @@ python-aiml
 beautifulsoup4
 requests
 webbscrapers-api
-corona-api
-corona_api
 html5lib
