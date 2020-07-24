@@ -24,6 +24,7 @@ soup = BeautifulSoup(r.content, 'html5lib')
 #change id to wlcm channel id/tube....
 ctp = ["ctp-guide"]
 uru_guide = ["uru-guide"]
+color_codes = [0x00FFDA,0x0DFF00,0xFFEB00,0x00FFD7,0x004CFF,0xC600FF,0xFF00AA,0xFF0004,0xCF9292]
 memes_ctrl = ["memes"]
 rust_ctrl = ["rust-language"]
 anime_reco = ["animes",'anime','weeb-smash','weebs','weeb']
@@ -41,7 +42,7 @@ anouncement = 630333673584984064  #were want to anounce
 newvideo = 630513815855038496     #were want to upload new video
 admin_ctrl = 638263332863737868
 wike = ["wikipedia"]
-
+bot_logs = 736316437118844939
 suggest_vid = 637272528393338880
 
 #valid users
@@ -77,15 +78,32 @@ bot.remove_command("help")
 
 
 #######################       start         ###########################
-@bot.event
-async def on_message(ctx):
-    if str(ctx.author) in bot_name:
-        pass
-    else:
-        if str(ctx.channel) in bot_private:
-            s = k.respond(ctx.content)
-            await ctx.channel.send(s)
 
+
+@bot.command(pass_context=True, aliases=['bud','bro','bot'])
+async def brb(ctx, *, reason=None):
+    if reason == None:
+        await ctx.send("What ? ask me any Questions don't just brb or bro me !")
+    else:
+        if str(ctx.author) in bot_name:
+            pass
+        else:
+            if str(ctx.channel) in bot_private:
+                krp = k.respond(reason)
+                s ="> **" + str(ctx.author) + "**  --> " + reason + "\n" + krp
+
+                embed = discord.Embed(title="Bot logs !",
+                                    description=f'{str(ctx.author)} --> {reason}\n{krp}',
+                                    color=random.choice(color_codes)) 
+                embed.set_thumbnail(
+                    url="https://i.ibb.co/nmV3QC0/pngwave.png"
+                )
+                embed.set_footer(text=f"{ctx.guild}", icon_url=f"{ctx.guild.icon_url}")
+                embed.timestamp = datetime.datetime.utcnow()
+
+                channel = bot.get_channel(id= bot_logs)
+                await channel.send(embed=embed)
+                await ctx.channel.send(s)
 
 
 
@@ -195,7 +213,7 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     embed = discord.Embed(title="",
-                        description= f"Welcome to Crimanu MFF \nWOW! now we have {len(list(member.guild.members))} member in our Crimanu family!!!\nIf you need any help ask our moderators" ,
+                        description= f"Welcome to Weeb Smasher's official Discord server \nWOW! now we have {len(list(member.guild.members))} member in our Weeb's family!!!\nIf you need any help ask our moderators" ,
                         color=0xe01aa1)
     embed.set_thumbnail(url= f"{member.avatar_url}")
     embed.set_author(name=f"{member.name}", icon_url=f"{member.avatar_url}")
@@ -543,7 +561,7 @@ async def delete(ctx , * , number:int=None ):
                 await ctx.send("You must input a number")
             else:
                 delete = await ctx.message.channel.purge(limit=number+1)
-                await ctx.send(f"{number} Messages deleted by {ctx.message.author.mention}")
+                await ctx.send(f"{number} Messages deleted by {ctx.message.author}")
         except:
             await ctx.send("I can't delete messages here")
     else:
