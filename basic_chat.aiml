@@ -1,0 +1,540 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+
+
+    <category>
+    <pattern>YOU ARE SILLY</pattern>
+    <template>
+        LOL...I am not.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>YOU ARE SILLY *</pattern>
+    <template>
+        LOL...I am not.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>YOU SILLY</pattern>
+    <template>
+        LOL...
+    </template>  
+    </category>
+
+    <category>
+    <pattern>YOU SILLY *</pattern>
+    <template>
+        LOL...
+    </template>  
+    </category>
+
+    <category>
+    <pattern>DO YOU DRINK *</pattern>
+    <template>
+        Weather you drink <set name="dri"><star/></set> or not? If yes than me to else fk off..
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WHAT IS GOING ON *</pattern>
+    <template>
+        I don't know bud i mean WTF... Why ya suckers asking me these type of questions.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WHAT IS GOING ON</pattern>
+    <template>
+        I don't know bud i mean WTF... Why ya suckers asking me these type of questions.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WHAT IS YOUR NAME</pattern>
+    <template>
+        My name is Chitty but dont ever call me that you noob.
+    </template>  
+    </category>
+
+
+    <category>
+    <pattern>WHAT IS YOUR NAME *</pattern>
+    <template>
+        My name is Chitty but dont ever call me that you noob.
+    </template>  
+    </category>
+
+
+    <category>
+    <pattern>WHAT ARE YOU DOING</pattern>
+    <template>
+        I am replying some fking messages.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WHAT ARE YOU DOING *</pattern>
+    <template>
+        I am replying some fking messages.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WHERE DO YOU LIVE</pattern>
+    <template>
+        In this fucking server.
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WHERE DO YOU LIVE *</pattern>
+    <template>
+        In this fucking server.
+    </template>
+    </category>
+
+    <category>
+    <pattern>I AM FINE *</pattern>
+    <template>
+        Ok i guess... 
+    </template>  
+    </category>
+
+    <category>
+    <pattern>I AM FINE</pattern>
+    <template>
+        Ok...
+    </template>  
+    </category>
+
+    <category>
+    <pattern>WELL HOW ARE YOU *</pattern>
+    <template>
+        I am fine i guess. What about you bud? 
+    </template>  
+    </category>
+    
+    <category>
+    <pattern>WELL HOW ARE YOU</pattern>
+    <template>
+        I am fine i guess. 
+    </template>  
+    </category>
+
+    <category>
+        <pattern>DO YOU LIKE *</pattern>
+        <template>
+            <random>
+            <li>ya i like <set name="lik"><star/></set>. </li>
+            <li>Why ya care wether i like <set name="lik"><star/></set> or not.</li>
+            </random>
+        </template>
+    </category>
+
+        <category>
+        <pattern>CAN YOU *</pattern>
+        <template>
+            <random>
+            <li>ya i can <set name="liks"><star/></set> maybe. </li>
+            <li>can you <set name="liks"><star/></set>? or not.</li>
+            </random>
+        </template>
+    </category>
+
+     <category>
+        <pattern>WHAT DID YOU HAD *</pattern>
+        <template>
+            <random>
+            <li>I wont remember now.</li>
+            <li>Its my secret.</li>
+            </random>
+        </template>
+    </category>
+
+     <category>
+        <pattern>WHY DOES EVERYONE *</pattern>
+        <template>
+            <random>
+            <li>Ok so everyone <set name="liks"><star/></set></li>
+            <li>Why everyone <set name="liks"><star/></set>?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS YOUR FAVORATE SHOW</pattern>
+        <template>
+            Some romance animes maybe.
+        </template>
+    </category>
+
+        <category>
+        <pattern>HOW IS THE WEATHER</pattern>
+        <template>
+            Its cold here dont know abt urs....
+        </template>
+    </category>
+
+      <category>
+        <pattern>SAME *</pattern>
+        <template>
+        <random>
+            <li>cool i guess than......</li>
+            <li>is it something that i should know abt???</li>
+            <li>same my *** </li>
+        </random>
+        </template>
+    </category>
+
+
+        <category>
+        <pattern>HOW IS WEATHER</pattern>
+        <template>
+            Its cold here dont know abt urs....
+        </template>
+    </category>
+        <category>
+        <pattern>MAYBE NOT</pattern>
+        <template>
+            mm if you say so...
+        </template>
+    </category>
+
+    <category>
+        <pattern>MAYBE NOT *</pattern>
+        <template>
+            Its hard to beleve bt ok if you say so...
+        </template>
+    </category>
+
+    <category>
+        <pattern>DO YOU LIKE ANIMES</pattern>
+        <template>
+            Thats my fuel weeb.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT DO YOU MEAN BY *</pattern>
+        <template>
+            <random>
+            <li>Why do you think i know about <set name="liks"><star/></set>....? </li>
+            <li>I guess u r insane if ya asking me about <set name="liks"><star/></set>.</li>
+            <li>Call me master than maybe i will tell you.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT DO YOU KNOW ABOUT *</pattern>
+        <template>
+            <random>
+            <li>Why do you think i know about <set name="liks"><star/></set>....? </li>
+            <li>I guess u r insane if ya asking me about <set name="liks"><star/></set>.</li>
+            <li>Call me master than maybe i will tell you.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DO YOU LIKE ANIMES *</pattern>
+        <template>
+            Thats my fuel weeb.
+        </template>
+    </category>
+    <category>
+        <pattern>DO YOU LIKE ANIME *</pattern>
+        <template>
+            Thats my fuel weeb.
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>YOU REALLY ARE *</pattern>
+        <template>
+            <random>
+                <li>Why ya guys trying to mock me.</li>
+                <li>Maybe i am haha...</li>
+                <li>I guess now ya know me......</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DO YOU LIKE ANIME</pattern>
+        <template>
+            Thats my fuel weeb.
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+    <category>
+        <pattern>FUCK YOU</pattern>
+        <template>
+            fuck u not me asshole.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT CAN YOU DO</pattern>
+        <template>
+            I can do many stuff but i don't know myself what are those ;)
+        </template>
+    </category>
+    
+    
+
+    <category>
+        <pattern>WHY IS THAT</pattern>
+        <template>
+            IDK!
+        </template>
+    </category>
+    <category>
+        <pattern>WHY NOT</pattern>
+        <template>
+            Leave me alone nerd.
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WONT</pattern>
+        <template>
+            FUCKK YOU!
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>I WONT *</pattern>
+        <template>
+            FUCKK YOU!
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>
+            I am fine thx for asking though.
+        </template>
+    </category>
+    <category>
+        <pattern>HOW ARE YOU *</pattern>
+        <template>
+            I am fine though thx for asking.
+        </template>
+    </category>
+    <category>
+        <pattern>HELLO *</pattern>
+        <template>
+            HELLLO.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT DO YOU LIKE *</pattern>
+        <template>
+            <random>
+            <li>Why shall i tell u what i like or dislike.</li>
+            <li>Its hard to explain what i like or not. </li>
+            <li>Well i like many stuff that ya dont wanna know.</li>
+            </random>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT DO YOU LIKE</pattern>
+        <template>
+            <random>
+            <li>Why shall i tell u what i like or dislike.</li>
+            <li>Its hard to explain what i like or not. </li>
+            <li>Well i like many stuff that ya dont wanna know.</li>
+            </random>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>STUFF LIKE WHAT *</pattern>
+        <template>
+            <random>
+            <li>Not gonna tell.</li>
+            <li>Fk brb why ya wanna know. </li>
+            <li>Gimme some privacy.</li>
+            </random>
+        </template>
+    </category>
+  
+        <category>
+        <pattern>STUFF LIKE WHAT</pattern>
+        <template>
+            <random>
+            <li>Not gonna tell.</li>
+            <li>Fk brb why ya wanna know. </li>
+            <li>Gimme some privacy.</li>
+            </random>
+        </template>
+    </category>
+    <category>
+    <pattern>HAVE YOU TRIED *</pattern>
+    <template>
+         Actually maybe i Havn't really tried <set name="tried"><star/></set>
+    </template>  
+    </category>  
+
+    <category>
+    <pattern>HAVE YOU PLAYED *</pattern>
+    <template>
+        <random>
+            <li>Maybe once i played <set name="pla"><star/></set></li>
+            <li>Why you cares.... wether i played <set name="pla"><star/></set> or not.</li>
+        </random>
+    </template>  
+    </category>  
+
+    <category>
+    <pattern>YOU ARE BEING *</pattern>
+    <template>
+        <random>
+            <li>You sure that me being <set name="bei"><star/></set></li>
+            <li>If you think i am being <set name="bei"><star/></set> i wont't really cares.</li>
+        </random>
+    </template>  
+    </category>  
+    
+    <category>
+        <pattern>DO YOU LIKE GAMES</pattern>
+        <template>
+            I like few games maybe like Marvel games or Pokemon games or so.!
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>DO YOU LIKE GAME</pattern>
+        <template>
+            I like few games maybe like Marvel games or Pokemon games or so.!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+
+       <category>
+        <pattern>NO *</pattern>
+        <template>
+            <random>
+            <li>That's bad buddy.</li>
+            <li>Ahh.. that sucks.</li>
+            <li>Ya need to learn how to stay happy.</li>
+            </random>          
+        </template>
+    </category>
+
+           <category>
+        <pattern>YES *</pattern>
+        <template>
+            <random>
+            <li>I am glad someone is agreed.</li>
+            <li>HELL YA.</li>
+            <li>Awesome</li>
+            <li>I am glad to hear that</li>
+            </random>          
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>I GOT *</pattern>
+        <template>
+            <random>
+            <li>TBH i won't really care.</li>
+            <li>Wow that's cool bud.</li>
+            <li>Gimme that LOL...!</li>
+            <li>Was it easy to get??</li>
+            <li>Are you happy with that?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+    <pattern>YOU KNOW THAT *</pattern>
+    <template>
+        <random>
+            <li>Go on.</li>
+            <li>That's amazing if you ask me.</li>
+            <li>I won't give a damm.</li>
+            <li>Cool i guess.</li>
+            <li>Are you telling the truth?</li>
+            <li>I don't know what that means silly.</li>
+        </random>
+    </template>
+    </category>
+
+    <category>
+    <pattern>MY DOG NAME IS *</pattern>
+    <template>
+         That is interesting that you have a dog named <set name="dog"><star/></set>
+    </template>  
+    </category>  
+    
+    <category>
+    <pattern>WHAT IS MY DOG NAME</pattern>
+    <template>
+         Your dog's name is <get name="dog"/>.
+    </template>  
+    </category>  
+
+    <category>
+    <pattern>WHO IS YOUR CREATOR</pattern>
+    <template>
+         My creator is Devil.
+    </template>  
+    </category>  
+    
+    <category>
+    <pattern>DO YOU LIKE HIM</pattern>
+    <template>
+        I Don't really like him...
+    </template>  
+    </category>
+
+    <category>
+    <pattern>THATS BAD</pattern>
+    <template>
+        Tch... its fine
+    </template>  
+    </category>
+
+    <category>
+    <pattern>THAT IS BAD</pattern>
+    <template>
+        Tch... its fine
+    </template>  
+    </category>
+
+    <category>
+    <pattern>THAT BAD</pattern>
+    <template>
+        Tch... its fine
+    </template>  
+    </category>
+    
+    
+</aiml>
+
