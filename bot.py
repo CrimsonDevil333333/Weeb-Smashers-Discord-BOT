@@ -9,6 +9,7 @@ from discord.utils import get
 from random import randrange
 import asyncio
 import aiml
+import os
 import shutil
 from PIL import Image
 from PIL import ImageFont
@@ -47,10 +48,19 @@ valid_users = ["Crimson Devil#7759","piyush3105#0567"]
 
 list1 = []
 list2 = []
+################################################################## AIML ###########################
 k = aiml.Kernel()
-k.learn("std-startup.xml")
-k.respond("load aiml b")
+BRAIN_FILE="brain.dump"
+if os.path.exists(BRAIN_FILE):
+    print("Loading from brain file: " + BRAIN_FILE)
+    k.loadBrain(BRAIN_FILE)
+else:
+    print("Parsing aiml files")
+    k.bootstrap(learnFiles="std-startup.aiml", commands="load aiml b")
+    print("Saving brain file: " + BRAIN_FILE)
+    k.saveBrain(BRAIN_FILE)
 
+###################################################################################################
 def read_token():
     with open("token.txt","r") as f:
         lines =f.readlines()
@@ -67,8 +77,15 @@ bot.remove_command("help")
 
 #######################       start         ###########################
 
-
-
+@bot.command()
+async def brb(ctx, * , reason = None):
+    if str(ctx.channel) in bot_private:
+        if reason == None:
+            await ctx.send("What brb.....")
+        else:
+            s = k.respond(reason)
+            await ctx.send(s)
+# *************************************************************************** AIML ABOVE ! #######
 
 @bot.command(pass_context=True, aliases=['lea'])
 async def leave(ctx):
@@ -88,13 +105,7 @@ async def join(ctx):
     else:
         await ctx.send("You must be in a voice channel to use this command")
 
-@bot.command()
-async def brb(ctx, * , reason = None):
-    if str(ctx.channel) in bot_private:
-        if reason == None:
-            await ctx.send("What brb.....")
-        else:
-            await ctx.send(k.respond(reason))
+
 
 @bot.command(pass_context=True, aliases=['rec','recommend','recomend','reco','nerd'])
 async def weeb(ctx, * , reason =None):
