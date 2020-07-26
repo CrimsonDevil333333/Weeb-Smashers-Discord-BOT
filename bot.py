@@ -26,6 +26,9 @@ from discord.ext import commands
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
 
+if not discord.opus.is_loaded():
+    discord.opus.load_opus('libopus.so')
+
 ytdl_format_options = {
     'format': 'bestaudio/best',
     'outtmpl': 'music_cache',
