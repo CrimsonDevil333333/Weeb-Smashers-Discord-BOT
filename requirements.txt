@@ -6,6 +6,7 @@ async-timeout==3.0.1
 datetime
 praw
 wikipedia
+youtube_dl
 pillow
 python-aiml
 beautifulsoup4
