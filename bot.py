@@ -136,7 +136,7 @@ async def rust(ctx, * , reason =None):
 @bot.event
 async def on_ready():
     print("Logged in as: " + bot.user.name + "\n")
-    return await bot.change_presence(activity=discord.Activity(type=2 , name=f"Prefix is '{prefex}'"))
+    return await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching , name=f"Prefix is '{prefex}'"))
     
     
 
