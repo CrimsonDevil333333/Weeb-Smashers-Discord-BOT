@@ -13,6 +13,6 @@ requests
 webbscrapers-api
 html5lib
 matplotlib
+--upgrade youtube-dl
 pandas
 config
-youtube_dl
