@@ -18,6 +18,7 @@ youtube_dl.utils.bug_reports_message = lambda: ''
 ytdl_format_options = {
     'format': 'bestaudio/best',
     'outtmpl': 'music_cache',
+    #+'.%(ext)s'
     'restrictfilenames': True,
     'noplaylist': True,
     'nocheckcertificate': True,
@@ -95,7 +96,7 @@ class Music(commands.Cog):
             print("cache is removed!")
         else:
             print("cache dosn't exist yet")
-
+        await ctx.send("Lemme get files ready 😶")
         async with ctx.typing():
             player = await YTDLSource.from_url(url, loop=self.bot.loop)
             ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
@@ -105,7 +106,7 @@ class Music(commands.Cog):
     @commands.command()
     async def stream(self, ctx, *, url):
         """Streams from a url (same as yt, but doesn't predownload)"""
-
+        await ctx.send("Lemme get files ready 😶")
         async with ctx.typing():
             player = await YTDLSource.from_url(url, loop=self.bot.loop, stream=True)
             ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
