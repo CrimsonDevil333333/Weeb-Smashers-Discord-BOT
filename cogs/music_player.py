@@ -3,15 +3,16 @@ import youtube_dl
 import discord
 from discord.ext import commands
 import os
-
+"""
 try:
     if not discord.opus.is_loaded():
         discord.opus.load_opus('libopus.so')
+        print("its added")
     else:
         print("already there")
 except:
     print("erorr came maybe its allready loaded or file is not here ")
-
+"""
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
 
