@@ -149,7 +149,7 @@ async def on_member_join(member):
     embed.set_thumbnail(url= f"{member.avatar_url}")
     embed.set_author(name=f"{member.name}", icon_url=f"{member.avatar_url}")
     embed.set_footer(text=f"{member.guild}", icon_url=f"{member.guild.icon_url}")
-    embed.timestamp = datetime.datetime.utcnow()
+    
 
     channel = bot.get_channel(id=wlcm)
 
@@ -163,7 +163,7 @@ async def on_member_remove(member):
     embed.set_thumbnail(url= f"{member.avatar_url}")
     embed.set_author(name=f"{member.name}", icon_url=f"{member.avatar_url}")
     embed.set_footer(text=f"{member.guild}", icon_url=f"{member.guild.icon_url}")
-    embed.timestamp = datetime.datetime.utcnow()
+    
 
     channel = bot.get_channel(id=wlcm)
 
