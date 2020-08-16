@@ -99,7 +99,7 @@ async def weeb(ctx, * , reason =None):
                 url=imgs
             )
             embed.set_footer(text=f"{ctx.guild}", icon_url=f"{ctx.guild.icon_url}")
-            embed.timestamp = datetime.datetime.utcnow()
+          
             await ctx.send(embed=embed)
             if imgs == "https://i.ytimg.com/vi/HG_xsxSvTn4/maxresdefault.jpg":
                 await ctx.send("Shinmai Maou no Testament")
