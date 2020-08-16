@@ -8,6 +8,7 @@ from cogs.FunChat import AIMLS
 from cogs.info import INFO
 from cogs.covid.reddit import Reddit
 
+import datetime
 import wikipedia
 import discord
 from discord.ext import commands
