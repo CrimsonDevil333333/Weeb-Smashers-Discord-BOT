@@ -47,7 +47,7 @@ wike = ["wikipedia"]
 suggest_vid = 637272528393338880
 
 #valid users
-valid_users = ["Crimson Devil#7759","piyush3105#0567"]
+valid_users = ["Crimson Devil#7759"]
 
 list1 = []
 list2 = []
@@ -228,15 +228,6 @@ async def winner(ctx , * , number:int=None ):
                 await ctx.send(f"```congratulations '{ran}' you won```")
     else:
         await ctx.send("You cant decide winners 'LMAO'")
-
-
-
-
-
-
-
- 
-
 
 #hello
 @bot.command()

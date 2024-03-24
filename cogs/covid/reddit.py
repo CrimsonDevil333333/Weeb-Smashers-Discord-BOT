@@ -12,11 +12,11 @@ class Reddit(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-        self.red = praw.Reddit(client_id='FNpct8XLVG2LTg',
-                            client_secret='UeA14hUpw7LoKlkqFU2QDLoWu8M',
-                            username='CrimsonDevil333',
-                            password='shashikant@1',
-                            user_agent='my user agent')    
+        self.red = praw.Reddit(client_id='<ClientId>',
+                            client_secret='<SlientSecret>',
+                            username='<USERNAME>',
+                            password='<PASSWORD>',
+                            user_agent='my user agent')
 
     
     @commands.command()
